@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>연산자</title>
+</head>
+<body>
+   <h1>연산자</h1>
+   <script>
+      let strNum = "a100";
+      let num = 200;
+      console.log("+ :", strNum + num);
+      console.log("- :", strNum - num);
+      console.log("* :", strNum * num);
+      console.log("/ :", strNum / num);
+      console.log("+ :", Number(strNum) + num)
+      console.log("string : ", strNum + String(num))
+      console.log("null을 숫자로 변환하면?", Number(null));
+      console.log("공백을 숫자로 변환하면?", Number(" "));
+      console.log("\"\"을 숫자로 변환하면?", Number(""));
+
+      // 논리형 자료(false : 0, null, "", undefinde, NaN)
+      console.log("0 :",Boolean(0));
+      console.log("null :",Boolean(null));
+      console.log("\"\" :",Boolean(""));
+      console.log("undefined :",Boolean(undefined));
+      console.log("NaN :",Boolean(NaN));
+      console.log("나머지 모두 :",Boolean("==="));
+      //비교 연산
+      console.log("----------------------------------------------------------------------");
+      console.log(123 == "123"); // true => 값만 비교
+      console.log("123" === 123); // 자료형도 비교
+      console.log("----------------------------------------------------------------------");
+      console.log(123 != "123"); // 자료형도 비교 
+      console.log(123 !== "123");
+      console.log("----------------------------------------------------------------------");
+      console.log(`문자형 숫자는 ${strNum} 이고 숫자는 ${num} 입니다.`);
+      console.log(`10 + 20 = ${10+20}`)
+
+      //20을 기억공간에 저장하세요
+      let num2 = 20;
+      // 30을 기억공간에 저장하세요
+      
+      
+   </script>
+</body>
+</html>

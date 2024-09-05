@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>도전</title>
+</head>
+<body>
+   <h1>문제풀기</h1>
+   <script>
+      //1. 가로, 세로 입력
+      //let width = Number(prompt("가로 길이를 입력하세요"));
+      //let height = Number(prompt("세로 길이를 입력하세요"));
+      //2. 사각형 너비 구하기
+      //let area = width*height
+      //3. 알림창으로 결과 출력
+      //alert(`사각형의 너비 = ${area}`);
+      
+      //4. 가로, 세로 길이를 더해서 콘솔창에 출력
+      //area = width + height;
+      //console.log(area)
+
+      // 나이계산
+      // 1. 태어난 연도 입력받기
+      let birth = Number(prompt("태어난 년도를 입력하세요"))
+      // 2. 나이 계산하기
+      let today = new Date();
+      let year = today.getFullYear();
+      // 3. 웹 문서에 출력
+      document.write(`<h2>태어난 년도는 ${birth} 이고, 나이는 ${year-birth}세 입니다.</h2>`);
+      console.log()
+      // 출력문 : 태어난 연도는 0000년 이고, 나이는 00세 입니다.
+   </script>
+</body>
+</html>

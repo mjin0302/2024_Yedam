@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>조건문도전</title>
+</head>
+<body>
+   <h1>조건문 도전천국</h1>
+   <script>
+      // 사용자에게 수를 입력 받아 홀수와 짝수를 구분하는 프로그램을 작성 해 보세요.
+      // - 입력이 취소되면 '입력취소'출력
+      // - 홀, 짝 구별해서 출력
+      // let num = prompt("정수를 입력하세요");
+      
+      // if(num == null) {
+      //    console.log("숫자를 입력하지 않았습니다."); 
+      // } else if(num % 2 == 0) {
+      //    console.log("삐빅 짝수");
+      // } else {
+      //    console.log("홀수");
+      // }
+      
+      // 점수 3개 입력 -> 총점 -> 평균 -> 등급
+      // 사용자에게 국어, 영어, 수학 
+      let kor = parseInt(prompt("점수를 입력하세요"));
+      let eng = parseInt(prompt("점수를 입력하세요"));
+      let math = parseInt(prompt("점수를 입력하세요"));
+      let sum = kor + eng + math;
+      let avg = sum / 3;
+
+      let grade = ""; 
+      if(avg >= 90) {
+         grade = "수";
+      } else if(avg >= 80) {
+         grade = "우";
+      } else if (avg >= 70) {
+         grade = "미";
+      } else if (avg >= 60) {
+         grade = "양";
+      } else {
+         grade = "가";
+      }
+      
+      console.log(`총점 : ${sum}, 평균 : ${avg}, 등급 : ${grade}`)
+      
+   </script>
+</body>
+</html>
