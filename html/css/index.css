@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* .redtext {
+   color: red;
+} */
+/* body {
+   font-family: "Noto Sans KR", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: weight;
+   font-style: normal;
+} */
+/* h1 {
+   font-family: "Noto Sans KR", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: weight;
+   font-style: normal;
+} */
+header h1 ~ p {
+   font-family: "Noto Sans KR", sans-serif;
+   font-size: 20px;
+   font-weight: bold;
+   color: blueviolet;
+}
+
+header p:nth-of-type(1) {
+   color: blue;
+}
+h1 {
+   width: 500px;
+   height: 30px;
+   border: 1px solid #ccc;
+   text-align: center;
+   line-height: 20px;
+}
+
+#menu ul {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style-type: none;
+   width: 70%;
+   padding-left: 0px;
+   margin: 0 auto;
+}
+
+#menu ul li {
+   color: pink;
+   font-weight: bolder;
+}
+
+#menu ul li a {
+   color: initial;
+   text-decoration: none;
+}
+
+article {
+   border: 1px solid pink;
+   padding: 20px; /* 테두리 안여백 지정 */
+   margin: 20px; /* 테두리 바깥여백 지정 */
+}
+caption {
+   margin-bottom: 5px;
+}
+table  {
+   border: 1px solid #aaa;
+   border-collapse: collapse; /* 테이블 선 합쳐줘 */
+   margin: 10px;
+   text-align: center;
+   width: 90%;
+}
+th, td {
+   border: 1px solid #aaa;
+   padding: 10px;
+}
+thead {
+   background-color: #e7f1f3;
+}
+tbody {
+   text-align: center;
+}
+tfoot {
+   background-color: #eee;
+}
+#room thead {
+   background-color: pink;
+}
+#room tfoot {
+   color: blue;
+}
+img {
+   width: 50%;
+}
+
+#float {
+   float: right;
+   margin: 10px;
+}

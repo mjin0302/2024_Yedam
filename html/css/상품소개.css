@@ -1,0 +1,42 @@
+#container {
+   width: 60%;
+   margin: 0 auto;
+   text-align: center;
+   border: 0.5px solid #aaa;
+   padding: 0px 10px;
+}
+
+img {
+   width: 80%;
+   margin: 0 auto;
+}
+
+#check {
+   font-weight: bolder;
+}
+
+h1 {
+   box-sizing: border-box;
+   width: 100%;
+   background-color: black;
+   color: #fff;
+   font-size: 15px;
+   text-align: left;
+   line-height: 30px;
+   margin: 0px 0px 10px 0px;
+   padding: 0px 10px;
+}
+
+h2 {
+   color: red;
+   font-size: 20px;
+   margin-bottom: 200px 0px;
+   text-shadow: 1px 1px 5px #000;
+}
+span {
+   color: blue;
+}
+
+#container #check p:last-of-type {
+   font-size: 13px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>회원가입</title>
+   <script src="https://kit.fontawesome.com/9fc370938e.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="css/회원가입.css">
+   
+</head>
+<body>
+   <div id="container">
+      <form action="" name="join">
+         <fieldset>
+            <legend>로그인정보</legend>
+            <ul>
+               <li>
+                  <label for="u-id">아이디<i class="fa-solid fa-star-of-life"></i></label>
+                  <input type="text" name="u-id" id="u-id" autofocus required>
+               </li>
+               <li>
+                  <label for="pass">비밀번호<i class="fa-solid fa-star-of-life"></i></label>
+                  <input type="password" name="pass" id="pass" required>
+               </li>
+            </ul>
+         </fieldset>
+         <fieldset>
+            <legend>가입자 정보</legend>
+            <ul>
+               <li>
+                  <label for="u-name">이름</label>
+                  <input type="text" name="u-name" id="u-name">
+               </li>
+               <li>
+                  <label for="eMail">메일주소</label>
+                  <input type="email" name="eMail" id="eMail" value="abc@abc.com" readonly>
+               </li>
+               <li>
+                  <label for="birth">생년월일</label>
+                  <input type="date" name="birth" id="birth" placeholder="양력입력">
+               </li>
+            </ul>
+         </fieldset>
+         <fieldset class="center">
+            <input type="submit" value="가입하기">
+            <input type="reset" value="다시입력">
+         </fieldset>
+      </form>
+   </div>
+   <script>
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Position</title>
+   <style>
+      .box {
+         width: 100px;
+         height: 100px;
+         background-color: rgb(228, 230, 165);
+         margin: 5px;
+         text-align: center;
+      }
+      #box2 {
+         position: relative;
+         background-color: #e68d8d;
+         left: 50px;
+         top: -50px;
+      }
+      .abs {
+         position: absolute;
+         width: 50px;
+         height: 50px;
+         background-color: #024cb9;
+         color: #fff;
+      }
+      #box3 {
+         position: relative;
+         width: 300px;
+         height: 300px;
+      }
+      #abs1 {
+         left: 0;
+         top: 0;
+      }
+      #abs2 {
+         right: 0;
+         top: 0;
+      }
+      #abs3 {
+         left: 0;
+         bottom:0
+      }
+      #abs4 {
+         right: 0;
+         bottom: 0;
+      }
+      #abs5 {
+         left: 125px;
+         top: 125px;
+         z-index: 9999;
+      }
+      #abs6 {
+         left: 150px;
+         top: 150px;
+         background-color: black;
+         z-index: 10000;
+      }
+      #abs7 {
+         left: 160px;
+         top: 130px;
+         background-color: #e68d8d;
+      }
+      #box4 {
+         background-color: #ff0000;
+         color: #fff;
+         line-height: 100px;
+         border-radius: 50%;
+         font-size: 25px;
+         font-weight: bolder;
+         position: fixed;
+         right: 50px;
+         bottom: 30px;
+         cursor: pointer;
+      }
+      #visible {
+         /* display: none; */
+         /* visibility: hidden; */
+         opacity: 0.5;
+         cursor: pointer;
+         transition: 1s;
+      }
+      #visible:hover {
+         opacity: 1;
+      }
+      #over {
+         position: relative;
+      }
+      #over h3 {
+         position: absolute;
+         color: #024cb9;
+         top: 200px;
+         left: 200px;
+      }
+   </style>
+</head>
+<body>
+   <div class="box" id="box1">박스1</div>
+   <div class="box" id="box2">박스2</div>
+   <div class="box" id="box3">박스3
+      <div class="abs" id="abs1">abs1</div>
+      <div class="abs" id="abs2">abs2</div>
+      <div class="abs" id="abs3">abs3</div>
+      <div class="abs" id="abs4">abs4</div>
+      <div class="abs" id="abs5">abs5</div>
+      <div class="abs" id="abs6">abs6</div>
+      <div class="abs" id="abs7">abs7</div>
+   </div>
+   <div class="box" id="box4" >top</div>
+   <img src="img/강아지1.jfif" alt="강아지1" width="200" height="200">
+   <img id="visible" src="img/강아지2.jfif" alt="강아지2" width="200" height="200">
+   <div id="over">
+      <img src="img/양파쿵야.jfif" alt="강아지3" width="500" height="auto">
+      <h3>Minjin, Kim</h3>
+   </div>
+</body>
+<script>
+   const topButton = document.querySelector('#box4');
+   topButton.onclick = function() { alert('top') };
+</script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>지원서</title>
+   <style>
+      #container {
+         width: 540px;
+         margin: 0 auto;
+         padding: 20px;
+         border: 1px solid #ddd;
+      }
+      form fieldset {
+         border: none;
+         margin-bottom: 20px;
+         width: 100%;
+      }
+      form legend {
+         color: rgb(13, 104, 165);
+         font-size: 20px;
+         font-weight: bold;
+      }
+      .info label {
+         width: 80px;
+      }
+      form ul li {
+         list-style: none;
+      }
+      form label {
+         display: inline-block;
+         width: 120px;
+         margin-bottom: 20px;
+         font-weight: bold;
+      }
+      input[type="radio"] + label {
+         width: 170px;
+      }
+      input[type="radio"]:checked + label {
+         color: blue;
+      }
+      form input {
+         padding: 5px;
+      }
+      .btnBox {
+         text-align: center;
+      }
+      
+      button {
+         width: 80px;
+         height: 35px;
+         border: 1px solid #119cdd;
+         background-color: #fff;
+         color: #119cdd;
+         border-radius: 5px;
+         font-weight: 700;
+         cursor: pointer;
+         transition: 0.5s;
+         margin-right: 10px;
+      }
+      button:hover {
+         background-color: #119cdd;
+         color: #fff;
+         transition: 0.5s;
+      }
+   </style>
+</head>
+<body>
+   <div id="container">
+      <h1>국제 개발자 지원서</h1>
+      <span>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다      </ㄴ>
+      <hr>
+      <form action="">
+         <fieldset>
+            <legend>개인 정보</legend>
+            <ul class="info">
+               <li>
+                  <label for="u-name">이름</label>
+                  <input type="text" name="u-name" id="u-name">
+               </li>
+               <li>
+                  <label for="u-phon">연락처</label>
+                  <input type="tel" name="u-phon" id="u-phon3" >
+               </li>
+            </ul>
+         </fieldset>
+         <fieldset>
+            <legend>지원분야</legend>
+            <ul>
+               <li>
+                  <input type="radio" checked name="choice" >
+                  <label for="web">웹 퍼블리싱</label>
+               </li>
+               <li>
+                  <input type="radio" name="choice">
+                  <label for="apple">웹 어플리케이션 개발</label>
+               </li>
+               <li>
+                  <input type="radio" name="choice">
+                  <label for="setting" >개발 환경 개선</label>
+               </li>
+            </ul>
+         </fieldset>
+         <fieldset>
+            <legend>지원 동기</legend>
+            <ul>
+               <textarea name="textarea" id="textarea" cols="60" rows="10" placeholder="지원 동기 간략히 써 주세요"></textarea>
+               <button type="submit">접수하기</button>
+               <button type="reset">다시쓰기</button>
+            </ul>
+         </fieldset>
+      </form>
+   </div>
+   
+</body>
+</html>

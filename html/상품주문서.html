@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>상품주문서</title>
+   <style>
+      /* container */
+      #container {
+         width: 500px;
+         margin: 0 auto;
+      }
+      form fieldset {
+         border: 1px solid rgb(120, 0, 156);
+         margin-bottom: 20px;
+         width: 100%;
+      }
+      form legend {
+         color: rgb(120, 0, 156);
+         font-size: 20px;
+         font-weight: bold;
+      }
+      form ul li {
+         list-style: none;
+      }
+      form label {
+         display: inline-block;
+         width: 70px;
+         margin-bottom: 20px;
+         font-weight: bold;
+      }
+      form input {
+         padding: 5px;
+      }
+      .d-flex {
+         display: flex;
+      }
+      #box3 label {
+         width: 150px;
+      }
+      input[type="number"] {
+         width: 50px;
+      }
+      .btnBox {
+         text-align: center;
+      }
+      .btnBox button {
+         width: 80px;
+         height: 35px;
+         border: 1px solid #ad4eec;
+         background-color: #ad4eec;
+         border-radius: 5px;
+         color: #fff;
+         font-weight: 700;
+         cursor: pointer;
+         transition: 0.5s;
+         margin-right: 10px;
+      }
+      .btnBox button:hover {
+         background-color: #fff;
+         color: #ad4eec;
+         transition: 0.5s;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="container">
+      <h1>상품주문서</h1>
+      <form action="" name="order">
+         <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+               <li>
+                  <label for="u-id">이름</label>
+                  <input type="text" name="u-id" id="u-id" placeholder="여백없이 입력">
+               </li>
+               <li>
+                  <label for="u-phone">연락처</label>
+                  <input type="tel" name="u-phone" id="u-phone" placeholder="연락가능한 번호">
+               </li>
+            </ul>
+         </fieldset>
+         
+         <fieldset>
+            <legend>배송지 정보</legend>
+            <ul>
+               <li>
+                  <label for="u-id">주소</label>
+                  <input type="text" name="u-id" id="address">
+               </li>
+               <li>
+                  <label for="u-phone2">전화번호</label>
+                  <input type="tel" name="u-phone2" id="u-phone2">
+               </li>
+               <li class="d-flex">
+                  <label for="memo">메모</label>
+                  <textarea name="memo" id="memo" cols="50" rows="5"></textarea>
+               </li>
+            </ul>
+         </fieldset>
+         <fieldset id="box3">
+            <legend>주문 정보</legend>
+            <ul>
+               <li>
+                  <input type="checkbox">
+                  <label for="melon">경북성주 참외<small>(5kg)</small></label>
+                  <input type="number" name="melon" id="melon" value="0">
+                  <span>Box</span>
+               </li>
+               <li>
+                  <input type="checkbox" checked>
+                  <label for="grape">경북영천 포도<small>(5kg)</small></label>
+                  <input type="number" name="grape" id="grape" value="0">
+                  <span>Box</span>
+               </li>
+               <li>
+                  <input type="checkbox">
+                  <label for="watermelon">경북봉화 수박<small>(5kg)</small></label>
+                  <input type="number" name="watermelon" id="watermelon" value="0">
+                  <span>Box</span>
+               </li>
+            </ul>
+         </fieldset>
+         <div class="btnBox">
+            <button type="submit">주문하기</button>
+            <button type="reset">다시작성</button>
+         </div>
+      </form>
+   </div>
+   
+</body>
+</html>

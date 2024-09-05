@@ -1,0 +1,33 @@
+#goods {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+#goods h1 {
+   width: 100%;
+}
+#goods #goodsAtcBox {
+   width: 80%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+#goods #goodsAtcBox article {
+   border: 1px solid #ccc;
+   padding: 10px;
+   width: 49%;
+   height: 300px;
+}
+#goods article p {
+   text-align: justify;
+   line-height: 1.5;
+}
+#goodsImgBox {
+   width: 19%;
+   text-align: center;
+}
+#goodsImgBox img {
+   width: 100%;
+   height: 200px;
+}

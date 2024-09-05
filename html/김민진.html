@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>김민진</title>
+   <!-- <link rel="stylesheet" href="css/김민진.css"> -->
+   <script src="https://kit.fontawesome.com/9fc370938e.js" crossorigin="anonymous"></script>
+   <style>
+      #container {
+         width: 1000px;
+         margin: 0 auto;
+         display: flex;
+         flex-wrap: wrap;
+      }
+      header {
+         background-color: beige;
+         width: 100%;
+         text-align: center;
+      }
+      nav {
+         background-color: #000;
+      }
+      nav ul {
+         display: flex;
+         justify-content: flex-start;
+         list-style: none;
+         padding: 0px;
+      }
+      #fr{
+         margin-left: auto;
+      }
+      nav a {
+         color: #fff;
+         text-decoration: none;
+         padding: 10px;
+         display: block;
+      }
+      aside {
+         background-color: #eee;
+      }
+   </style>
+</head>
+<body>
+   <div id="container">
+      <header>
+         <h1>
+            <i class="fa-regular fa-face-kiss-wink-heart"></i>
+            김민진 페이지에 온 것을 환영합니다. 
+            <i class="fa-regular fa-face-kiss-wink-heart"></i>
+         </h1>
+         <nav>
+            <ul>
+               <li><a href="#">메인메뉴</a></li>
+               <li><a href="#">메인메뉴</a></li>
+               <li><a href="#">메인메뉴</a></li>
+               <li id="fr"><a href="#">공지사항</a></li>
+            </ul>
+         </nav>
+      </header>
+      <aside>
+         <h3>좌측 사이드</h3>
+      </aside>
+      <section>
+         <h3>회원가입 영역입니다</h3>
+         <form action="" name="frm">
+            <legend>개인정보 등록</legend>
+            <fieldset>
+               <ul>
+                  <li>
+                     <label for="u-id">계정아이디</label>
+                     <input type="text" name="u-id" id="u-id" autofocus>
+                  </li>
+                  <li>
+                     <label for="u-pass">비밀번호</label>
+                     <input type="password" name="u-pass" id="u-pass">
+                  </li>
+                  <li>
+                     <label for="u-passChk">비밀번호 확인</label>
+                     <input type="password" name="u-passChk" id="u-passChk">
+                  </li>
+                  <li>
+                     <label for="u-name">이름</label>
+                     <input type="text" name="u-name" id="u-name" placeholder="5자 미만 공백없이">
+                  </li>
+                  <li>
+                     <label for="u-phone">전화번호</label>
+                     <input type="tel" name="u-phone" id="u-phone">
+                  </li>
+               </ul>
+            </fieldset>
+            <fieldset>
+               <button type="submit">회원 가입</button>
+               <button type="reset">정보 수정</button>
+            </fieldset>
+         </form>
+      </section>
+      <aside>
+         <h3>우측 사이드</h3>
+      </aside>
+      <footer>
+         <h1>푸터영역 입니다</h1>
+      </footer>
+   </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>p385</title>
+</head>
+<style>
+   .wrapper {
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 100px);
+      grid-template-areas: 
+         "box1 box2 box2"
+         "box1 box3 box4"
+         "box5 box5 box5"
+      ;
+      gap: 10px;
+   }
+   .box1 {
+      background-color: pink;
+      grid-area: box1;
+   }
+   .box2 {
+      background-color: orange;
+      grid-area: box2;
+   }
+   .box3 {
+      background-color: plum;
+      grid-area: box3;
+   }
+   .box4 {
+      background-color: green;
+      grid-area: box4;
+   }
+   .box5 {
+      background-color: gray;
+      grid-area: box5;
+   }
+   @media (max-width: 768px)  {
+      .wrapper {
+         width: 720px;
+         margin: 0 auto;
+         display: block;
+      }
+      .box {
+         height: 200px;
+         margin-bottom: 10px;
+      }
+   }
+   @media (max-width: 320px) {
+      .wrapper {
+         width: 300px;
+         margin: 10px auto;
+         display: block;
+      }
+      .box {
+         height: 200px;
+         margin-bottom: 10px;
+      }
+   }
+</style>
+<body>
+   <div class="wrapper">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+      <div class="box box5">5</div>
+   </div>
+</body>
+</html>

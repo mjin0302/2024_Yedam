@@ -1,0 +1,93 @@
+#container {
+   width: 960px;
+   margin: 0 auto;
+}
+#container-fluid {
+   width: 100%;
+   overflow: hidden;
+}
+aside {
+   float: left;
+   width: 27%;
+   height:1000px;
+   background-color: #f2eee9;
+   padding: 20px;
+   margin-right: 3%;
+}
+#info {
+   margin-bottom: 200px;
+   text-align: center;
+}
+#info img {
+   width: 200px;
+   height: auto;
+}
+#info h2, #info p {
+   text-align: left;
+   margin-left: 15px;
+}
+#info2 {
+   margin-bottom: 100px;
+   margin-left: 15px;
+}
+#infoSNS {
+   margin-left: 15px;
+   
+}
+#infoSNS a {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   color: #081f5c;
+   margin-top: -10px;
+}
+#infoSNS i {
+   margin-left: 10px;
+   font-size: 20px;
+}
+section {
+   float: left;
+   width: 70%;
+   margin-top: 50px;
+}
+#experienceBox {
+   margin-bottom: 20px;
+}
+#experienceBox ul {
+
+}
+#experienceBox li {
+   padding: 5px;
+}
+
+section:hover .highlight:after{
+  width:100%;
+}
+.highlight{
+  display: inline-block; 
+  position: relative;
+}
+.highlight:after{
+  content:"";
+  width: 0;
+  height: 15px;
+  display: inline-block;
+  background: #fdf5d0;
+  position: absolute;
+  bottom:0;
+  left:0;
+  z-index:-1;
+  transition: 0.2s;
+}
+
+#educationBox table {
+   width: 65%;
+   border-collapse: collapse;
+   font-size: 17px;
+}
+#educationBox table thead tr {
+   background-color: #ffdbdf;
+}
+#educationBox th, td {
+   padding: 10px 5px;
+}

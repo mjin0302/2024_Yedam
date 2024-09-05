@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container{
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+        .container :first-child{
+            background-color: pink; /*container뒤에 띄어쓰기 없으면 컨테이너 중 첫째, 띄어쓰기 있으면 컨테이너 안의 요소중 첫째 */
+        }
+        .container :last-child{
+            background-color: rgb(227, 243, 0);
+        }
+        .container :only-child{
+            background-color: green;
+        }
+        .container :nth-child(2n){
+            background-color: rgb(191, 191, 214);
+        }
+        .container :nth-child(2n+1){
+            background-color: antiquewhite;
+        }
+        .container p:first-child::before{
+            content: "긴급🚨";
+            color: red;
+            margin:0 10px;
+            position: relative;
+            top: -8px; /*위치를 위로 올리고 싶을 때 postion: relative 와 top 값 사용 */
+            font-weight: bold;
+        }
+        .container p:first-child::after{
+            content: "긴급🚨";
+            color: red;
+            margin:0 10px;
+            position: relative;
+            top: -8px; /*위치를 위로 올리고 싶을 때 postion: relative 와 top 값 사용 */
+            font-weight: bold;
+        }
+        i{
+            color: pink;
+            font-size: 30px;
+        }
+        ::selection{
+            background-color: rgb(156, 240, 149);
+        } /*가상클래스_가상요소 : 마우스로 긁으면 배경색 변화*/
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>첫 번째(●'◡'●)</p>
+        <div>두 번째(★ ω ★)</div>
+        <p>세 번째༼ つ ◕_◕ ༽つ</p>
+        <div>네 번째(✿◡‿◡)</div>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore aperiam ut, illo ducimus debitis repudiandae at eum accusantium officia temporibus reiciendis voluptate nihil dolor minima libero iure eos asperiores neque!</div>
+    </div>
+    <div class="container">
+        <div>혼자(ﾉ◕ヮ◕)ﾉ*: <i class="fa-brands fa-instagram"></i></div>
+        
+    </div>
+    
+</body>
+</html>

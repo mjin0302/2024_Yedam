@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>첫 페이지</title>
+        <link rel="stylesheet" href="css/index.css">
+
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"> -->
+    </head>
+
+    <body>
+        <header>
+            <h1>나의 첫 페이지?!!!!!!!!!!!!!!!</h1>
+            <p class="redtext">나는 <q>김민진</q>입니다.</p>
+            <p class="redtext">반갑습니다.</p>
+            <hr>
+            <nav id="menu">
+                <ul>
+                    <li>ᓚᘏᗢ<a href="#text">Text Tag</a></li>
+                    <li>(∪.∪ )...zzz<a href="#list">List Tag</a></li>
+                    <li>(●'◡'●)<a href="#table">Table Tag</a></li>
+                    <li>( ´･･)ﾉ(._.`)<a href="#image">Image Tag</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2>Tag 종류</h2>
+            <article>
+                <h2 id="text">텍스트 관련 태그</h2>
+                <p><em>Lorem</em> <b>ipsum</b> dolor sit amet <strong>consectetur</strong>, adipisicing elit. A nulla facere vel? Totam eveniet, voluptate ut pariatur, eius tempore sed inventore, doloribus aperiam amet cupiditate assumenda nesciunt iusto architecto culpa?</p>
+                <blockquote cite="www.naver.com">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, iste?</blockquote>
+                <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iste cum provident magni praesentium dolore! 
+                    Dolorem culpa non magni pariatur recusandae hic, minima
+                                velit praesentium corrupti ex voluptatum, 
+                                                veritatis similique porro.</pre>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    <div style="color: red;">oluptatem, praesentium in nostrum</div>V nesciunt corrupti harum minima sed molestias nulla, 
+                    <mark><span style="color: pink;"> rerum sequi</mark> iste?</span> Cupiditate praesentium illum dicta, earum nesciunt itaque?</p>
+                <abbr title="본말">줄임말</abbr>
+                <p>사과<small>(5kg)</small></p>
+                <h3>H<sub>2</sub>0</h3>
+                <h3>y<sup>2</sup> = x<sup>2</sup></h3>
+                <h3><ruby>學習<rt>학습</rt></ruby></h3>
+                <hr>
+            </article>
+            <p><a href="#menu">Top</a></p>
+            <article>
+                <h2 id="list">목록 관련 태그</h2>
+                <p>코끼리 가방에 넣기</p>
+                <ol type="i" start="3">
+                    <li>가방을 연다.</li>
+                    <li>코끼리 넣는다.</li>
+                    <li>가방을 닫는다.</li>
+                </ol>
+                <p>여행준비물</p>
+                <ul>
+                    <li>돈/카드</li>
+                    <li>핸드폰</li>
+                    <li>이어폰</li>
+                </ul>
+                <p>프론트 엔드</p>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>웹 문서의 내용을 작성</dd>
+                    <dt>CSS</dt>
+                    <dd>웹 문서의 디자인을 담당</dd>
+                    <dd>문서를 보기 좋게 꾸며줌</dd>
+                    <dt>JavaScript</dt>
+                    <dd>웹 문서에서 사용자의 동작에 반응하는 동적 페이지 구성</dd>
+                </dl>
+            </article>
+            <a href="#menu">Top</a>
+            <article>
+                <h3 id="table">표 만들기</h3>
+                <table>
+                    <caption>표 제목</caption>
+                    <tr>
+                        <th>순번</th>
+                        <th>이름</th>
+                        <th>연락처</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>김민진</td>
+                        <td>010-3076-3043</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>성춘향</td>
+                        <td>010-1111-2222</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>아무나</td>
+                        <td>010-2222-3333</td>
+                    </tr>
+                    <table >
+                        <caption>선물용과 가정용 상품 구성</caption>
+                        <thead>
+                            <tr>
+                                <th>용도</th>
+                                <th>중량</th>
+                                <th>개수</th>
+                                <th>가격</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">선물용</td>
+                                <td>3kg</td>
+                                <td>11~16과</td>
+                                <td>35,000원</td>
+                            </tr>
+                            <tr>
+                                <td>5kg</td>
+                                <td>18~26과</td>
+                                <td>52,000원</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">가정용</td>
+                                <td>3kg</td>
+                                <td>11~16과</td>
+                                <td>30,000원</td>
+                            </tr>
+                            <tr>
+                                <td>5kg</td>
+                                <td>18~26과</td>
+                                <td>47,000원</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4">가격은 상황에 따라 변동될 수 있습니다</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </table>
+
+                <table id="room">
+                    <caption>요안도라 객실</caption>
+                    <thead>
+                        <tr>
+                            <th>방이름</th>
+                            <th>대상</th>
+                            <th>크기</th>
+                            <th>가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>유채방</td>
+                            <td>여성 도미토리</td>
+                            <td rowspan="3">4인실</td>
+                            <td rowspan="4">1인 20,000원</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">동백방</td>
+                            <td>동성 도미토리</td>
+                        </tr>
+                        <tr>
+                            <td>유채방</td>
+                        </tr>
+                        <tr>
+                            <td>천혜향방</td>
+                            <td>-</td>
+                            <td>2인실</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">바깥채 전체를 렌트합니다</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+            <p><a href="#menu">Top</a></p>
+            <article>
+                <h3>Link 만들기</h3>
+                <a href="https://www.naver.com" target="_blank" title="NAVER로 이동">NAVER</a>
+                <a href="멀티미디어.html" target="_blank" title="멀티미디어 페이지로 이동">
+                    <img src="img/C0006912_2020121417314224906.jpg" width="50" height="50" alt="레드향">
+                </a>
+                <a href="img/C0006912_2020121417314224906.jpg" download>파일 다운로드</a>
+                <a href="강아지용품.html" download>html 다운로드</a>
+            </article>
+        </section>
+        <p><a href="#menu">Top</a></p>
+        <aside>
+            <h3 id="image">이미지 삽입</h3>
+            <img src="img/강아지1.jfif" alt="강아지3" id="float">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad eum eveniet! Ab quos architecto, cupiditate doloremque deleniti recusandae quis, veniam cumque quisquam asperiores fugiat! Repudiandae laborum aspernatur fugit aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. A ea assumenda maxime eum esse enim voluptas asperiores, minus voluptatum, iure quisquam. Deserunt, aut deleniti debitis quos vel dolorem maxime non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dignissimos asperiores exercitationem eos nam at rerum aperiam necessitatibus corporis autem possimus nulla veniam, cumque eaque saepe suscipit itaque iste earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad id labore inventore deleniti consequatur repellendus, ducimus repudiandae culpa magni ex nisi, perferendis beatae nulla vel magnam in necessitatibus ipsa rem.</p>
+            <img src="img/C0006912_2020121417314224906.jpg" alt="" title="잠이 달아나는 이미지">
+            <figure>
+                <img src="img/C0006912_2020121417314224906.jpg" alt="레드향">
+                <figcaption>An elephant at sunset</figcaption>
+            </figure>
+        </aside>
+    </body>
+</html>

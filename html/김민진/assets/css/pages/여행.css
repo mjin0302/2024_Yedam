@@ -1,0 +1,43 @@
+* {
+   box-sizing: border-box;
+}
+#container {
+   width: 1108px;
+   margin: auto;
+}
+#container-fluid {
+   width: 100%;
+   border: 1px solid #ccc;
+   padding: 20px;
+   float: left;
+}
+#textBox {
+   text-align: center;
+   color: #797979;
+   margin: 0px 0 30px 0;
+}
+section {
+   text-align: center; 
+}
+
+.travel-card {
+   margin: auto;
+   float: left;
+   margin-right: 20px;
+   width: 250px;
+   height: 340px;
+   border: 1px solid #ccc;
+   border-radius: 20px;
+   padding: 10px;
+   text-align: center;
+}
+
+.travel-card:last-child {
+   margin-right: 0px;
+}
+
+.travel-card img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+}

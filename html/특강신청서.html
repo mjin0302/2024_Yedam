@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>수강과목 신청서</title>
+   <style>
+      #container {
+         width: 540px;
+         margin: 0 auto;
+         padding: 20px;
+         border: 1px solid #ddd;
+      }
+      form fieldset {
+         border: 1px solid #474747;
+         margin-bottom: 20px;
+         width: 100%;
+      }
+      form legend {
+         color: rgb(13, 104, 165);
+         font-size: 20spx;
+         font-weight: bold;
+      }
+      form input, select {
+         padding: 5px;
+      }
+      form ul li {
+         list-style: none;
+      }
+      form fieldset:first-of-type label {
+         display: inline-block;
+         width: 120px;
+         margin-bottom: 20px;
+         font-weight: bold;
+      }
+      form fieldset:nth-of-type(2) label {
+         display: inline-block;
+         width: 80px;
+         margin-bottom: 20px;
+         font-weight: bold;
+      }
+      .btnBox {
+         text-align: center;
+      }
+      button {
+         width: 80px;
+         height: 35px;
+         border: 1px solid #119cdd;
+         background-color: #fff;
+         color: #119cdd;
+         border-radius: 5px;
+         font-weight: 700;
+         cursor: pointer;
+         transition: 0.5s;
+         margin-right: 10px;
+      }
+      button:hover {
+         background-color: #119cdd;
+         color: #fff;
+         transition: 0.5s;
+      }
+   </style>
+</head>
+<body>
+   <h1>여름방학 특강 신청</h1>
+   <form action="get" name="frm">
+      <fieldset>
+         <legend>수강과목</legend>
+         <ul>
+            <li>
+               <label for="eng">영어회화초급</label>
+               <input type="text" name="eng" id="eng" readonly value="오전 9:00 ~ 11:00">
+            </li>
+            <li>
+               <label for="interest" >관심분야(영어)</label>
+               <input type="text" name="interest" id="interest" list="data">
+               <datalist id="data">
+                  <option value="grammar">문법</option>
+                  <option value="voca">어휘</option>
+                  <option value="speaking">회화</option>
+                  <option value="listening">리스닝</option>
+                  <option value="news">뉴스청취</option>
+               </datalist>
+            </li>
+         </ul>
+      </fieldset>
+      <fieldset>
+         <legend>신청자</legend>
+         <ul>
+            <li> 
+               <label for="u-id">아이디 </label>
+               <input type="text" id="u-id" name="u-id">
+            </li>
+            <li> 
+               <label for="pw">비밀번호 </label>
+               <input type="password" id="pw" name="pw">
+            </li>
+            <li>
+               <label for="u-name">이름</label>
+               <input type="text" name="u-name" id="u-name" placeholder="공백없이 입력하세요">
+            </li>
+            <li>
+               <label for="classOf">학번</label>
+               <input type="text" name="classOf" id="classOf" placeholder="8자리 학번">           
+            </li>
+            <li>
+               <label for="department">학과</label>
+               <select name="department" id="department">
+                  <optgroup label="공과대학">
+                     <option value="architecture">건축공학과</option>
+                     <option value="machine">기계공학과</option>
+                     <option value="industry">산업공학과</option>
+                     <option value="electric">전기전자공학과</option>
+                     <option value="computer" selected>컴퓨터공학과</option>
+                     <option value="chemistry">화학공학과</option>
+                  </optgroup>
+                  <optgroup label="인문대학">
+                     <option value="theHistory">사학과</option>
+                     <option value="label">어문학부</option>
+                     <option value="philosophy">철학과</option>
+                  </optgroup>
+               </select>
+            </li>
+         </ul>
+      </fieldset>
+      <div class="btnBox">
+         <button type="submit">완료</button>
+         <button type="reset">취소</button>
+      </div>
+   </form>
+</body>
+</html>
