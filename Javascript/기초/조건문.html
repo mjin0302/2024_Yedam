@@ -68,7 +68,60 @@
       }
       console.log(`평균: ${avg} : 등급 : ${grade}`);
 
+      // 삼항 연산자
+      // (조건) ? true : false
+      su = 98;
+      let col = 3;
+      let row = parseInt(su / col);
+      (su % col  == 0) ? row : row++;
+      console.log(`몇줄 : ${row}`);
+      su % 2 == 0 ? console.log("짝수") : console.log("홀수");
+
+      // switch(값) 값에 따라 처리
+      // 수를 입력 3으로 나눈 나머지가
+      // 0이면 최고, 1이면 우수, 2이면 보통을 출력
+      switch(su%3) {
+         case 0: 
+            console.log("최고");
+            break;
+         case 1:
+            console.log("우수");
+            break;
+         case 2:
+            console.log("보통");
+            break;
+         default:
+            console.log("오류입니다.");
+            break;
+      }
+
+      // 평균 점수 이용 -> 등급매기기
+      // switch 이용
+      // 평균 값 변경 => 10, 9, 8, 7, 6, 나머지
       
+      avg = 88;
+      grade = ""; //등급 저장 변수
+      switch(Math.floor(avg/10)) {
+         case 10: 
+            grade = "A"
+            break;
+         case 9:
+            grade = "B"
+            break;
+         case 8:
+            grade = "C"
+            break;
+         case 7:
+            grade = "D"
+            break;
+         case 6:
+            grade = "E"
+            break;
+         default:
+            grade = "F";
+            break;
+      }
+      console.log(`평균 : ${avg}, 등급 : ${grade}`)
    </script>
 </body>
 </html>

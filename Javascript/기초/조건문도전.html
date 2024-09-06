@@ -23,26 +23,85 @@
       
       // 점수 3개 입력 -> 총점 -> 평균 -> 등급
       // 사용자에게 국어, 영어, 수학 
-      let kor = parseInt(prompt("점수를 입력하세요"));
-      let eng = parseInt(prompt("점수를 입력하세요"));
-      let math = parseInt(prompt("점수를 입력하세요"));
-      let sum = kor + eng + math;
-      let avg = sum / 3;
+      // let kor = parseInt(prompt("점수를 입력하세요"));
+      // let eng = parseInt(prompt("점수를 입력하세요"));
+      // let math = parseInt(prompt("점수를 입력하세요"));
+      // let sum = kor + eng + math;
+      // let avg = sum / 3;
 
-      let grade = ""; 
-      if(avg >= 90) {
-         grade = "수";
-      } else if(avg >= 80) {
-         grade = "우";
-      } else if (avg >= 70) {
-         grade = "미";
-      } else if (avg >= 60) {
-         grade = "양";
-      } else {
-         grade = "가";
-      }
+      // let grade = ""; 
+      // if(avg >= 90) {
+      //    grade = "수";
+      // } else if(avg >= 80) {
+      //    grade = "우";
+      // } else if (avg >= 70) {
+      //    grade = "미";
+      // } else if (avg >= 60) {
+      //    grade = "양";
+      // } else {
+      //    grade = "가";
+      // }
       
-      console.log(`총점 : ${sum}, 평균 : ${avg}, 등급 : ${grade}`)
+      //console.log(`총점 : ${sum}, 평균 : ${avg}, 등급 : ${grade}`)
+
+      // 자리배치 -> 몇줄을 만들어야 될까?
+      // 입장객 수 = 10명
+      // 한 줄에 3명씩 앉음
+      // 자리는 몇줄?
+      // let person = 10;
+      // let row = 3;
+      // let result = Math.ceil(result);
+      // console.log(result);
+
+      let person = 37;
+      let col = 3;
+      let row = parseInt(person/col);
+      if(person % col != 0) {
+         row++;
+      }
+      console.log(row);
+
+      // 사용자에게 수를 입력 받아
+      let num = parseInt(prompt("수를 입력하세요"));
+      let day = ""
+      // 7로 나눈 나머지 값에 따라 
+      // 0 = 월, 1=화 ~ 6=토
+      switch (num % 7) {
+         case 0:
+            day = "일";
+            break;
+         case 1:
+            day = "월";
+            break;
+         case 2:
+            day = "화";
+            break;
+         case 3:
+            day = "수";
+            break;
+         case 4:
+            day = "목";
+            break;
+         case 5:
+            day = "금";
+            break;
+         case 6:
+            day = "토";
+            break;
+         default :
+            day = "Error";
+            break;
+      }
+      // 요일이 콘솔창에 출력
+      console.log(`오늘은 ${day}요일 입니다`)
+      
+      // 삼항 연산자 이용할 것
+      // 사용자의 나이를 입력받아 
+      let age = parseInt(prompt("나이를 입력하세요"));
+      // 18세 이상이면 "00세 판매 가능!"
+      // 18세 미만이면 "00세 판매 불가!"
+      age > 18 ? console.log(`${age}세 판매 가능!`) : console.log(`${age}세 판매 불가!`)
+      // 알림창에 출력
       
    </script>
 </body>

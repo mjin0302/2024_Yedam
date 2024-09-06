@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>반복문</title>
+   <style>
+      div {
+         width: 150px;
+         padding: 10px;
+         margin: 10px;
+         float: left;
+         border: 1px solid #ccc;
+         text-align: center;
+      }
+      div:nth-child(2n) {
+         background-color: #eee;
+      }
+      div:nth-child(2n + 1) {
+         background-color: #ffdede;
+      }
+   </style>
+</head>
+<body>
+   <h1>반목문</h1>
+   <script> 
+      // 반복문 : 조건이 만족할 때 까지 내용을 반복 처리
+      for (let i = 1; i < 11; i++) {
+         console.log(i);
+      }
+
+      for(let i = 2; i < 11; i += 2 ){
+         console.log(i)
+      }
+
+      // 1에서 10까지 합 구하기
+      let sum = 0;
+      for(let i = 1; i < 11; i++) {
+         sum += i
+         console.log(`i: ${i}, sum: ${sum}`)
+      }
+      console.log(`총 합 : ${sum}`);
+
+      // 1에서 100까지 홀수합, 짝수합 구하기
+      // 수가 홀수면? 홀수합에
+      // 수가 짝수면 짝수합에 더해서
+      // 홀수합 = , 짝수합 = 출력
+      // 2,4,6,8,10
+      let num = 100;
+      let oddSum = 0;
+      let evenSum = 0;
+      sum = 0; // sum 초기화
+      let sum3 = 0;
+      for(let i = 0; i <= num; i++) {
+         // 총 합
+         sum += i;
+         // 3의 배수 합
+         if(i % 3 == 0) {
+            sum3 += i
+         }
+         // 홀수, 짝수 합
+         if (i % 2 == 0) {
+            evenSum += i;
+         } else {
+            oddSum += i;
+         }
+      }
+      console.log(`총 합 : ${sum}, 짝수합 : ${evenSum}, 홀수합 : ${oddSum}\n 3의 배수 합 : ${sum3}`);
+
+      // 중첩 반복문 
+      for(let i = 1; i <= 3; i++) {
+         for(let j = 1; j <= 4; j++) {
+            console.log(`i : ${i}, j : ${j}`)
+         }
+         console.log("-------------------------")
+      }
+
+      // 구구단
+      let dan = 0;
+      let gup = 0;
+      for(let i = 1; i < 10; i++) {
+         document.write(`<div><h3>=== ${i}단 ===<br></h3>`)
+         for(let j = 1; j < 10; j++) {
+            gup += j;
+            document.write(`${i} * ${j} = ${i * j} <br>`)
+         }
+         document.write(`</div>`)
+      }
+
+      // *
+      // **
+      // ***
+      // ****
+      // *****
+      // for(let i = 0; i < 6; i++) {
+      //    let star = "";
+      //    for(let j = 0; j < i; j++) {
+      //       star += "*"
+      //    }
+      //    console.log(star);
+      // }
+
+      //     *
+      //    **
+      //   ***
+      //  ****
+      // *****
+      let stars = "";
+      for(let i = 1; i < 6; i++) {
+         
+         for(let b=1; b <= 5-i; b++){
+            stars += " ";
+         }
+         for(let j = 1; j < i; j++) {
+            stars += "*"
+         }
+         stars += "\n";
+      }
+      console.log(stars);
+      
+      // let blank = ""
+      // for(let i = 5; i > 0; i--) {
+      //    let stars = "";
+      //    blank += " ";
+      //    for(let j = 0; j < i; j++) {
+      //       stars += "*"
+      //    }
+         
+      //    console.log(blank, stars)
+      // }
+
+      // blank = "    "
+      // for(let i = 5; i >  ; i--) {
+      //    
+      //    for(let j = 0; j < i; j++) {
+      //       console.log(j)
+      //    }
+            //blank += i
+      //    //stars += "*"
+      //    //console.log(stars);
+      // }
+
+      // while문 => 특정 조건에 만족하는 경우 반복문 탈출
+      // 1에서 n까지의 합이 200을 넘는 순간 n값 구하기
+      
+
+      let n = 0;
+      sum = 0;
+      do {
+         n++;
+         sum += n;
+      } while (sum <= 200)
+      console.log(`1에서 ${n} 까지 합 = ${sum}`)
+
+      // 배열의 합을 구하세요
+      let nums = [5,7,9,888,7,-9,85,99];
+      sum = 0;
+      
+      for(let i = 0; i < nums.length; i++) {
+         sum += nums[i];
+      }
+      console.log(`배열의 총 합 : ${sum}`);
+      
+      // 배열의 최대값을 구하세요
+      let maxNum = nums[0];
+      for(let i = 0; i < nums.length; i++) {
+         if(maxNum < nums[i]) {
+            maxNum = nums[i];
+         }
+      }
+      console.log(`배열의 최대값 : ${maxNum}`);
+      
+      // 배열의 최소값을 구하세요
+      let minNum = nums[0];
+      for(let i = 0; i < nums.length; i++) {
+         if(minNum > nums[i]) minNum = nums[i];
+      }
+      console.log(`배열의 최대값 : ${minNum}`);
+   </script>
+</body>
+</html>

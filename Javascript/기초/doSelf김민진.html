@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Study</title>
+   <style>
+      table {
+         /* border: 1px solid #ddd; */
+         border-collapse: collapse;
+         margin: 10px;
+      }
+      td {
+         border: 1px solid #aaa;
+         background-color: #ccc;
+         padding: 10px;
+      }
+   </style>
+</head>
+<body>
+   <h1>과제풀기</h1>
+   <script>
+      // 1. 1에서 100까지 홀수 합과 짝수 합을 구하는 프로그램을 작성하세요.
+      let oddSum = 0; // 홀수
+      let evenSum = 0; // 짝수
+      for(let i = 1; i < 101; i++) {
+         if(i % 2 == 0) {
+            evenSum += i
+         } else {
+            oddSum += i
+         }
+      }
+      console.log(`짝수 합 : ${evenSum}, 홀수 합 : ${oddSum}`)
+
+      // 2. 1에서 100까지 5의 배수의 합을 구하는 프로그램을 작성하세요.
+      let sum = 0;
+      for(let i = 1; i < 101; i++) {
+         if(i % 5 == 0) {
+            sum += i
+         } 
+      }
+      console.log(`5의 배수의 합 : ${sum}`)
+
+      // 3. 숫자 n을 입력 받아서 n!(펙토리얼)을 계산 하세요 3! = 3*2*1=6
+      // let inputNum = Number(prompt("숫자를 입력하세요"));;
+      // let n = 1;
+      // for(let i = inputNum; i > 0; i--) {
+      //    n = n * i;
+      // }
+      // console.log(`펙토리얼 : ${n}`);
+      
+      // 4. 2단 ~9단까지 구구단을 작성하는 프로그램을 작성하세요. 
+      let dan = 2;
+      let num = 9;
+      for(let i = dan; i < 10; i++) {
+         for(let j = 1; j < 10; j++) {
+            console.log(`${i} * ${j} = ${i*j}`)
+         }
+         console.log(`====================`)
+      }
+      
+      // 5. 숫자를 입력 받아 4의 배수인지 아닌지 출력하세요 - 취소 버튺을 누르면 결과를 보여주지 않음
+      // num = prompt("숫자를 입력하세요");
+      // if(num != null) {
+      //    if(Number(num) % 4 == 0) {
+      //       console.log(`${num}은 4의 배수입니다.`);
+      //    } else {
+      //       console.log(`${num}은 4의 배수가 아닙니다.`);
+      //    }
+      // } else {
+      //    console.log(`숫자를 입력하세요`);
+      // }
+
+      // 6. 숫자를 입력 받아 1부터 입력 받은 수까지의 3의 배수 찾기
+      //    3의 배수를 출력하고, 마지막에 3의 배수의 개수 출력 
+      // num = Number(prompt("숫자를 입력하세요"));
+      // sum = 0;
+      // let multiple = []
+      // for(let i = 1; i <= num; i++) {
+      //    if(i % 3 == 0) {
+      //       multiple.push(i);
+      //       sum += 1;
+      //    }
+      // }
+      // console.log(`3의 배수 (${multiple.join(", ")})\n3의 배수의 개수${sum}`);
+      num = Number(prompt("숫자를 입력하세요"));
+      sum = 0;
+      let pieces = "" 
+      // let multiple = []
+      for(let i = 1; i <= num; i++) {
+         if(i % 3 == 0) {
+            sum += 1;
+            pieces = i + ",";
+         }
+      }
+      console.log(`3의 배수 ${pieces}\n3의 배수의 개수${sum}`);
+      // 7. 입장객 수와 한 줄에 앉을 사람 수를 입력 받아 좌석을 배치 하세요
+         // 좌석 번호를 문서에 표로 만들기
+      // let person = Number(prompt("입장객 수를 입력하세요")); // 입장객 수
+      // let chair = Number(prompt("한 줄에 앉을 사람 수")); // 한 줄에 앉을 사람 수
+      // let row = Math.ceil(person / chair); //줄 수
+      // let seatNo = 0;
+      // for(let i = 1; i <= row; i++) {
+      //    document.write(`<table><tr>`);
+      //    for(let j = 1; j <= chair; j++) {
+      //       seatNo ++;
+      //       document.write(`<td>좌석${seatNo}</td>`);      //       if(seatNo >= person) break;
+      //    }
+      //    document.write(`</tr></table>`)
+      // }
+      // 8. 다음과 같이 출력되는 프로그램을 작성하세요
+      //     *
+      //    **
+      //   ***
+      //  ****
+      // *****
+      // 9.
+
+      
+      let layout = ""
+      layout += `<table>`;
+      for(let i = 1; i <= 3; i++) {
+         layout += `<tr>`
+         for(let j = 1; j <= 5; j++) {
+            layout += `<td>(${i},${j})</td>`
+         }
+         layout += `</td>`
+      }
+      layout += `</table>`;
+      document.write(layout);
+   </script>
+</body>
+</html>
