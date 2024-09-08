@@ -50,14 +50,14 @@
       // console.log(`펙토리얼 : ${n}`);
       
       // 4. 2단 ~9단까지 구구단을 작성하는 프로그램을 작성하세요. 
-      let dan = 2;
-      let num = 9;
-      for(let i = dan; i < 10; i++) {
-         for(let j = 1; j < 10; j++) {
-            console.log(`${i} * ${j} = ${i*j}`)
-         }
-         console.log(`====================`)
-      }
+      // let dan = 2;
+      // let num = 9;
+      // for(let i = dan; i < 10; i++) {
+      //    for(let j = 1; j < 10; j++) {
+      //       console.log(`${i} * ${j} = ${i*j}`)
+      //    }
+      //    console.log(`====================`)
+      // }
       
       // 5. 숫자를 입력 받아 4의 배수인지 아닌지 출력하세요 - 취소 버튺을 누르면 결과를 보여주지 않음
       // num = prompt("숫자를 입력하세요");
@@ -73,6 +73,7 @@
 
       // 6. 숫자를 입력 받아 1부터 입력 받은 수까지의 3의 배수 찾기
       //    3의 배수를 출력하고, 마지막에 3의 배수의 개수 출력 
+      // 배열 사용
       // num = Number(prompt("숫자를 입력하세요"));
       // sum = 0;
       // let multiple = []
@@ -83,17 +84,22 @@
       //    }
       // }
       // console.log(`3의 배수 (${multiple.join(", ")})\n3의 배수의 개수${sum}`);
-      num = Number(prompt("숫자를 입력하세요"));
-      sum = 0;
-      let pieces = "" 
-      // let multiple = []
-      for(let i = 1; i <= num; i++) {
-         if(i % 3 == 0) {
-            sum += 1;
-            pieces = i + ",";
-         }
-      }
-      console.log(`3의 배수 ${pieces}\n3의 배수의 개수${sum}`);
+
+      // 배열 사용 x
+      // num = Number(prompt("숫자를 입력하세요"));
+      // sum = 0;
+      // let pieces = "" 
+      // for(let i = 1; i <= num; i++) {
+      //    if(i % 3 == 0) {
+      //       sum += 1;
+      //       console.log(i);
+      //       pieces += i + ",";
+      //    }
+      // }
+      // if (pieces.length > 0) {
+      //    pieces = pieces.slice(0, -1);
+      // }
+      // console.log(`3의 배수 ${pieces}\n3의 배수의 개수${sum}`);
       // 7. 입장객 수와 한 줄에 앉을 사람 수를 입력 받아 좌석을 배치 하세요
          // 좌석 번호를 문서에 표로 만들기
       // let person = Number(prompt("입장객 수를 입력하세요")); // 입장객 수
@@ -114,8 +120,58 @@
       //   ***
       //  ****
       // *****
-      // 9.
+      // for(let i = 1; i < 6; i++) {
+      //    let stars = "";
+      //    for(let j = 1; j <= 6-i; j++) {
+      //       stars += " ";
+      //    }
+      //    for(let k = 1; k <= i; k++) {
+      //       stars +="*"
+      //    }
+      //    console.log(`${stars}\n`);
+      // }
 
+      // let star = "";
+      // for(let i = 0; i < 6; i++) {
+      //    for(let j = 0; j < 6-i; j++) {
+      //       star += " ";
+      //    }
+      //    for(let k = 0; k < i; k++) {
+      //       star +="*"
+      //    }
+      //    star +="\n"
+      // }
+      // console.log(`${star}`);
+      
+      // 9.     *    
+      //       ***   
+      //      *****  
+      //    *********
+      //      *****  
+      //       ***   
+      //        *    
+      let line = 5;
+      for(let i = 0; i < line; i++) {
+         let stars = "";
+         let stars2 = "";
+         for (let j = 0; j < line - i; j++) {
+           stars += " ";
+         }
+         for (let k = 0; k < 2 * i + 1; k++) {
+            stars += "*";
+         }
+         console.log(stars);
+      }
+      for (let i = line - 1; i >= 0; i--) {
+         let stars = "";
+         for (let j = -1; j < line - i; j++) {
+            stars += " ";
+         }
+         for (let k = 0; k < 2 * i - 1; k++) {
+            stars += "*";
+         }
+         console.log(stars);
+      }
       
       let layout = ""
       layout += `<table>`;
