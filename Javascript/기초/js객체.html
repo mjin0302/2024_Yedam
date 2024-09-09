@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Object</title>
+</head>
+<body>
+   <h1>객체</h1>
+   <script>
+      let person = {
+         name : "hong",
+         age : 25,
+         arr : [1, 2, 3 ,4],
+         eat : function() {
+            console.log(`내 이름은${this.name}, 나이는 ${this.age}세 입니다.`)
+         }
+      }
+
+      // 객체의 속성과 메소드 추가
+      // 1. 접근
+      person.job = "programmer";
+      person.print = function() {
+         console.log(`내 직업은 ${this.job}입니다`);
+      }
+      person.print();
+
+      console.log(person.name);
+      console.log(person.arr[0]);
+      person.eat();
+      
+      // 삭제
+      delete person.arr;
+
+      // for ~ in
+      // 객체 처음부터 끝까지 돌려보고싶을 때 사용 추천
+      for(let key in person) {
+         console.log(key + ":" + person[key]);
+      }
+
+      // 다음과 같은 객체를 생성할 수 있는 생성자 함수를 작성하여 
+      // 가격을 출력해 보세요
+      // - 생성자 함수명 : Product
+
+      // 1. 생성자 함수 만들기 => 객체 생성
+      function Product(pname, weight, price) { // 판매 기준을 잡아줌
+         this.pname = pname;
+         this.weight = weight;
+         this.price = price;
+      }
+
+      Product.prototype.calc = function(w) {
+         return w / this.weight * this.price;
+      } 
+
+      // 객체 생성
+      let sam = new Product("삼겹살", 100, 5000);
+      console.log(sam.pname, sam.calc(500))
+      console.log();
+      let sogogi = new Product("소고기", 50, 10000);
+      console.log(sogogi.pname, sogogi.calc(100))
+   </script>
+</body>
+</html>

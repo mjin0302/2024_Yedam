@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>배열(Array)</title>
+</head>
+<body>
+   <h1>배열</h1>
+   <script>
+      // 배열 생성
+      let colors = ["빨강", "주황", "노랑", "초록"];
+      let seasons = ["봄", "여름", "가을", "겨울"];
+      console.log(colors);
+      
+      // 배열의 값 => 인덱스
+      console.log(colors[0]);
+      console.log(colors.length);
+
+      // 배열요소 전체 출력
+      for(let i = 0; i < colors.length; i++) {
+         console.log(colors[i]);
+      }
+      
+      // 객체에선 key를 가져오고 배열에서는 index를 가져옴
+      for(let idx in colors) {
+         console.log(idx + " : " + colors[idx]);
+      }
+
+      // 배열의 값 가져오기
+      for(let ele of colors) {
+         console.log(ele);
+      }
+
+      // 배열 합치기
+      let concat = seasons.concat(colors);
+      console.log(concat);
+      // 배열 요소 나열
+      console.log(colors.join()); 
+      console.log("reverse",colors.reverse()); // 배열 뒤집기(원본 변함)
+      console.log(colors.reverse());
+      // 배열의 값 추가 및 제거
+      // 뒤
+      colors.push("파랑"); // 배열의 마지막에 추가
+      colors.pop(); // 배열의 마지막 제거
+      console.log(colors);
+      // 앞
+      colors.unshift("흰색"); // 배열 첫번째에 추가
+      colors.shift(); // 배열 첫번째 제거
+      console.log(colors);
+
+      // 원하는 위치에 추가 및 삭제
+      console.log(colors);
+      colors.splice(2, 2,"검정", "보라")
+      console.log(colors);
+      colors.splice(3, 0,"은색");
+      console.log(colors);
+
+      // 배열의 요소 추출
+      let myColor = colors.slice(1, 3);
+      console.log(myColor);
+
+      // 중복 데이터 체크
+      if(colors.indexOf("금색") == -1) {
+         colors.push("금색")
+         console.log("은색 추가함 ㅋ");
+      } else {
+         console.log("은색 이미 존재한다")
+      }
+      console.log(colors);
+
+      // 배열의 요소와 인덱스 가져오는 메소드
+      colors.forEach(function(ele, idx) {
+         console.log(idx + " : " + ele);
+      });
+
+      // 새로운 배열 생성, 요소 값을 변경할 수 있음
+      let nums = [10, 20, 30, 40, 50];
+      let newArr = nums.map((ele) => ele * ele);
+      console.log(newArr);
+
+      // 새로운 배열 생성 -> 조건에 만족하는 요소만 추출해서 배열 생성
+      let newFilter = nums.filter((ele) => ele >= 30);
+      console.log(newFilter);
+
+      // 배열의 합
+      let arrhap = nums.reduce((a,b) => a + b );
+      console.log("arrhap :", arrhap);
+
+      // 배열 정렬 : 유니코드 값에 의해 오름차순(작은거에서 큰거로 -> ㄱ,ㄴ,ㄷ,ㄹ, ~)
+      console.log(colors.sort().reverse());
+
+      nums = [10, 20, 30, 40, 50, 7, 200, 3];
+      console.log(nums.sort((a, b) => a - b));
+      console.log(nums.sort((a, b) => b - a));
+   </script>
+</body>
+</html>

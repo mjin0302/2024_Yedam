@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>function_do_self</title>
+
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+   <h1 id="hd">도전 함수문제</h1>
+   <script>
+      let hd = document.getElementById("hd");
+      hd.onclick = () => {
+         // 이벤트에 이벤트처리기(핸들러) 연결만 해놓음
+         hd.onclick = gongji;
+         
+         function gongji () {
+            Swal.fire({
+               title: "The Internet?",
+               text: "That thing is still around?",
+               icon: "question"
+            });
+         }
+
+      }
+      // min ~ max 합 구하기
+      // 함수 선언
+      // 함수 호출
+      
+      function SumFunc(min, max) {
+         let result = 0;
+         for(let i = min; i <= max; i++) {
+            result += i;
+         }
+         return result;
+      }
+      console.log("합 :", SumFunc(1, 10));
+      
+      const SumFunc2 = (min, max) => {
+         let result = 0;
+         for(let i = min; i <= max; i++) {
+            result += i;
+         }
+         return result;
+      }
+      ;
+      console.log(SumFunc2(1, 10));
+
+      // 이름, 국어, 영어, 수학 데이터를 넘겨 받아 성적을 처리하는 함수를 생성 하세요
+      // 1. 이름, 국어, 영어, 수학 넘겨받는 함수 생성
+      // 2. 받은 매개변수로 총점, 평균, 성적 계산
+      // 3. 출력
+      function sungjuk (name, ...score) {
+         let totalScore = 0;
+         for(let i = 0; i < score.length; i++) {
+            totalScore += score[i]; // 총점
+         }
+
+         let avg = Math.round(totalScore / 3); // 평균
+
+         let grade = ""; 
+         if (avg >= 90) {
+            grade = "A";
+         } else if (90 < avg >= 80) {
+            grade = "B";
+         } else if (80 < avg >= 70) {
+            grade = "C";
+         } else if (70 < avg >= 60) {
+            grade = "D";
+         } else {
+            grade = "E";
+         }
+         console.log(`${name}\t${totalScore}\t${avg}\t${grade}` );
+      }
+      sungjuk("민진", 100, 100, 100);
+   </script>
+</body>
+</html>

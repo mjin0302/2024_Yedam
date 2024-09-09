@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Event</title>
+   <style>
+      #container {
+         width: 300px;
+         margin: 0 auto;
+      }
+      img {
+         width: 300px;
+         height: auto;
+      }
+      #desc {
+         display: none;
+      }
+   </style>
+</head>
+<body>
+   <div id="container">
+      <h1 id="hd">이벤트</h1>
+      <img src="../../html/img/원숭이_뽀뽀.jfif" alt="헤헷">
+      <button type="button" id="showBtn">상세설명 보기</button>
+      <div id="desc">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rem fugiat incidunt voluptatem minus ipsa ut voluptatibus alias dolores nemo, commodi sed odit maiores dolor dolore amet molestiae! Molestiae, voluptatum!</p>
+         <button type="button" id="closeBtn">상세설명 닫기</button>
+      </div>
+   </div>
+   <script>
+      let showBtn = document.querySelector("#showBtn");
+      let desc = document.querySelector("#desc");
+      let closeBtn = document.querySelector("#closeBtn");
+
+      showBtn.onclick = show;
+      function show() {
+         desc.style.display = 'block';
+         showBtn.style.display = 'none';
+      }
+      
+      closeBtn.onclick = () => {
+         desc.style.display = 'none';
+         showBtn.style.display = 'block';
+      }
+
+      let h1 = document.querySelector("h1");
+      h1.onclick = () => {
+         h1.style.color = "pink";
+      }
+   </script>
+</body>
+</html>
