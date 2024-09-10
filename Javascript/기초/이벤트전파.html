@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>이벤트 전파</title>
+   <style>
+      .accent {
+         color: pink;
+         font-weight: bold;
+      }
+   </style>
+</head>
+<body>
+   <h1 id="parent">parent Event
+      <p id="child">child Event</p>
+   </h1>
+   <script>
+      // 웹 요소 가져오기
+      let parent = document.querySelector("#parent");
+      let child = document.querySelector("#child");
+
+      parent.addEventListener("click", parentFunc);
+      child.addEventListener("click", childFunc, false);
+
+      function parentFunc() {
+         alert("부모이벤트 발생");
+      }
+      function childFunc() {
+         alert("자식이벤트 발생");
+         // event.stopPropagation();
+      }
+
+      // 태그 생성
+      let newP = document.createElement('p'); // p태그 생성
+      let newText = document.createTextNode("Hello World"); // 내용생성
+      newP.appendChild(newText); // 부모 자식 관계 연결
+      document.body.appendChild(newP); // 태그를 body에 연결
+      newP.setAttribute("class", "accent"); // class 속성 부여
+   </script>
+</body>
+</html>

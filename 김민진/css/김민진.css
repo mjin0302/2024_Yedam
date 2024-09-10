@@ -1,0 +1,111 @@
+*{
+   box-sizing: border-box;
+   font-family: '맑은 고딕', 'Malgun Gothic';;
+}
+#container{
+   width: 1000px;
+   margin: 0 auto;
+   text-align: center;
+}
+/*헤더영역*/
+header {
+   width: 100%;
+}
+header nav {
+   width: 100%;
+   background-color: black;
+   padding: 0px 10px;
+   overflow: hidden;
+}
+header nav ul {
+   overflow: hidden;
+   padding: 0;
+   text-align: left;
+}
+header ul li {
+   display: inline-block;
+   width: auto;
+}
+header ul li a {
+   display: block;
+   color: #fff;
+   padding: 20px;
+   text-decoration: none;
+   border-radius: 3px;;
+}
+header ul li a:hover {
+   background-color: pink;
+   color: black;
+}
+
+header #floatRight {
+   float: right;
+   text-align: right;
+}
+/*좌측 사이드영역*/
+aside {
+   float: left;
+   width: 200px;
+   height: 700px;
+   background-color: #f0f0f0;
+   text-align: center;
+}
+
+/*섹션영역*/
+section {
+   float: left;
+   width: 600px;
+   height: 700px;
+   padding: 20px;
+   text-align: center;
+}
+section legend {
+   font-weight: bold;
+}
+
+/*회원가입 폼영역*/
+section form {
+   width: 500px;
+   text-align: center;
+   background-color: #ccc;
+   padding: 10px;
+   margin: 0 auto;
+}
+section form fieldset {
+   border: none;
+}
+section form ul {
+   padding: 0;
+}
+section form li {
+   list-style: none;
+   border-radius: 5px;
+   background-color: rgba(255, 255, 255, 0.5);
+   border: 1px solid #fff;
+   padding: 5px;
+   margin: 5px;
+}
+section form ul label {
+   width: 130px;
+   display: inline-block;
+}
+section form ul input {
+   width: 250px;
+   padding: 3px;
+}
+section button {
+   width: 150px;
+   border: none;
+   border-radius: 30px;
+   background-color: #ddd;
+   padding: 15px;
+}
+
+/*우측 사이드영역*/
+
+/*푸터 영역*/
+footer {
+   clear: both;
+   background-color: #ddd;
+   padding: 10px;
+}

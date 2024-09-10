@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>김민진</title>
+		<link rel="stylesheet" href="css/김민진.css">
+	</head>
+	<body>
+		<div id="container">
+		<!-- 헤더영역 -->
+			<header>
+				<h1>header 영역</h1>
+				<p>김민진 페이지에 온 것을 환영합니다.</p>
+				<nav>
+					<ul>
+						<li><a href="#">첫번째 메인메뉴</a></li>
+						<li><a href="#">두번째 메인메뉴</a></li>
+						<li><a href="#">세번째 메인메뉴</a></li>
+						<li id="floatRight"><a href="#">로그인</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- 왼쪽 사이드영역 -->
+			<aside>
+				<h2>좌측 사이드</h2>
+				<p>좌측영역 정의 내립니다</p>
+				<p>좌측영역 정의 내립니다</p>
+				<p>좌측영역 정의 내립니다</p>
+			</aside>
+
+			<!-- 섹션영역 -->
+			<section>
+				<h2>회원가입 영역입니다</h2>
+				<!-- 회원가입 폼 영역 -->
+				<form name="frm" action="">
+					<legend>step1 : 로그인 정보</legend>
+					<fieldset>
+						<ul>
+							<li>
+								<label for="u-id">계정아이디</label>
+								<input type="text" name="u-id" id="u-id" autofocus>
+							</li>
+							<li>
+								<label for="u-pass">비밀번호</label>
+								<input type="password" name="u-pass" id="u-pass">
+							</li>
+							<li>
+								<label for="u-passChk">비밀번호 확인</label>
+								<input type="password" name="u-passChk" id="u-passChk">
+							</li>
+						</ul>
+					</fieldset>
+					<legend>step2 : 개인 정보</legend>
+					<fieldset>
+						<ul>
+							<li>
+								<label for="u-name">이름</label>
+								<input type="text" name="u-name" id="u-name" placeholder="5자 미만 공백없이">
+							</li>
+							<li>
+								<label for="u-mail">이메일 계정</label>
+								<input type="email" name="u-mail" id="u-mail" placeholder="abc@naver.com">
+							</li>
+							<li>
+								<label for="u-phone">전화번호</label>
+								<input type="tel" name="u-phone" id="u-phone">
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<button type="button">회원 가입</button>
+						<button type="reset">정보 수정</button>
+					</fieldset>
+				</form>
+			</section>
+			<!-- 오른쪽 사이드영역 -->
+			<aside>
+				<h2>우측 사이드</h2>
+				<p>우측영역 정의 내립니다</p>
+				<p>우측영역 정의 내립니다</p>
+				<p>우측영역 정의 내립니다</p>
+			</aside>
+			<!-- 푸터 영역 -->
+			<footer>
+				<h2>푸터영역 입니다</h2>
+			</footer>
+		</div>
+	</body>
+</html>

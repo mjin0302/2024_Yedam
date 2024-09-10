@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>내장객체(built-in Object)</title>
+</head>
+<body>
+   <h1>Built-in Object</h1>
+   <script>
+      // 내장객체 : 미리 정의되어진 객체
+      // 날짜와 시간
+      let today = new Date();
+      let xMas = new Date(2024,11,25);
+      xMas = new Date("2024-12-25");
+      console.log("today", today);
+      console.log("x-max", xMas);
+      
+      let year = today.getFullYear();
+      let month = today.getMonth() + 1; // 0부터 시작함(0 -> 1월.....)
+      let date = today.getDate();
+      let week = today.getDay();
+      let day = "";
+      switch(week) {
+         case 0 : day = "일"; break;
+         case 1 : day = "월"; break;
+         case 2 : day = "화"; break;
+         case 3 : day = "수"; break;
+         case 4 : day = "목"; break;
+         case 5 : day = "금"; break;
+         case 6 : day = "토"; break;
+      }
+      console.log(`${year}년 ${month}월 ${date}일 ${day}요일`)
+      // 날짜 계산을 위한 기준 시간 : 1970-1-1-0:0:0:1
+      console.log("오늘은",new Date(1725928728116));
+      console.log(new Date("1995-03-02"));
+      console.log(today.getTime());
+      console.log(today.toLocaleString());
+      console.log(today.toLocaleDateString());
+      
+      // 크리스마스까지 며칠 남았을까?
+      let remain = xMas - today;
+      remain = Math.floor(remain / (1000 * 60 * 60 * 24));
+      console.log(`크리스마스까지 ${remain}일 남았어요`, );
+
+      // 예담에 온지 며칠째?
+      let startDay = new Date("2024-8-21");
+      let passDay = today - startDay;
+      passDay = Math.ceil(passDay / (1000 * 60 * 60 * 24))
+      console.log(`예담 온지 ${passDay}일 째`);
+      
+      // 수학 객체 : 수학 메소드 이용, 객체 생성하지 않고 사용
+      // 로또 번호
+      let randomNum = Math.random();
+      randomNum = Math.floor(randomNum * 45) + 1;
+      console.log(randomNum);
+
+      // 주사위 눈 발생
+      let dice = Math.floor(Math.random() * 6) + 1;
+      console.log(`주사위 = ${dice}`);
+
+      // 로또번호 발생
+      for(let i = 0; i < 5; i++) {
+         let lotto = "";
+         for (let j = 0; j < 6; j++) {
+            let random = Math.floor(Math.random() * 45) + 1;
+            if(lotto.indexOf(random) == -1 ) {
+               lotto += random + "\t";
+            } else {
+               j--;
+            }
+         }
+         console.log(lotto);
+      }
+
+      for(let i = 0; i < 5; i++) {
+         let lotto = [];
+         for (let j = 0; j < 6; j++) {
+            let random = Math.floor(Math.random() * 45) + 1;
+            if(lotto.indexOf(random) == -1 ) {
+               lotto.push(random);
+            } else {
+               j--;
+            }
+         }
+         console.log(lotto.join);
+      }
+
+   </script>
+</body>
+</html>
