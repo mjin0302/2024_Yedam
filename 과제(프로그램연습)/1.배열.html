@@ -10,8 +10,14 @@
         // 배열에 1에서 100사이의 무작위 수 10개를 입력
         // 배열의 합 계산
         // 최대값과 최소값 구하기
-
-
+        let arr = [];
+        
+        for(let i = 0; i < 10; i++) {
+            let num = Math.random();
+            num = Math.floor(num * 100) + 1;
+            arr.push(num);
+        }
+        console.log(arr);
     </script>
 
     
