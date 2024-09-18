@@ -8,12 +8,10 @@ let multBtn = document.querySelector("#multy");
 let divBtn = document.querySelector("#divid");
 
 // 이벤트 걸기
-
 addBtn.onclick = addFunc;
 subBtn.onclick = subFunc;
 multBtn.onclick = multFunc;
 divBtn.onclick = divFunc;
-
 
    function addFunc() {
       result.value = Number(num1.value) + Number(num2.value); 

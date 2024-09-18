@@ -14,7 +14,6 @@
             padding: 10px;
             list-style: none;
             border: 1px solid #ccc;
-            
         }
         #result{
             width: 300px;
@@ -36,7 +35,27 @@
     </div>
 
     <script>
-        
+        let divEle = document.querySelector("#result");
+
+        function change(color) {
+            console.log(color);
+            if(color === "green") {
+                divEle.style.background = "url(img/개구리.jpeg)";
+                divEle.style.backgroundSize = "contain";
+                divEle.style.backgroundPosition = "center";
+                divEle.style.backgroundRepeat = "no-repeat";
+            } else if(color === "orange") {
+                divEle.style.background = "url(img/숭마이걸.jpeg)";
+                divEle.style.backgroundSize = "contain";
+                divEle.style.backgroundPosition = "center";
+                divEle.style.backgroundRepeat = "no-repeat";
+            } else if (color === "purple") {
+                divEle.style.background = "url(img/baddies.jpeg)";
+                divEle.style.backgroundSize = "contain";
+                divEle.style.backgroundPosition = "center";
+                divEle.style.backgroundRepeat = "no-repeat";
+            }
+        }
     </script>
 </body>
 </html>

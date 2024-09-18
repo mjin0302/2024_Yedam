@@ -6,7 +6,8 @@
     <title>좌석배치도</title>
     <style>
         table{
-            /* border: 1px solid #ccc; */
+            width: 500px;
+            border: 1px solid #ccc;
             border-collapse: collapse;
             empty-cells: hide;
             margin-top: 30px;
@@ -30,7 +31,34 @@
     <div id="layout"></div>
 
     <script>
+        let personEle = document.querySelector("#person");
+        let colNumEle = document.querySelector("#colNum");
+        let btnEle = document.querySelector("#btn");
+        let layoutEle = document.querySelector("#layout");
+
+        let rowNumEle = 0;
         
+
+        btnEle.onclick = show;
+
+        function show() {
+            let seatNo = 0;
+            rowNumEle = Number(Math.ceil(personEle.value / colNumEle.value));
+            colNumEle = Number(colNumEle.value);
+
+            let elementList = `<table>`
+            for(let i = 1; i <= rowNumEle; i++) {
+                elementList += `<tr>`;
+                for(let j = 1; j <= colNumEle; j++) {
+                    if(seatNo >= personEle.value) break;
+                    seatNo ++;
+                    elementList += `<td>사람${seatNo}</td>`;
+                }
+                elementList += `</tr>`;   
+            }
+            elementList += `</table>`
+            layoutEle.innerHTML = elementList;
+        }
     </script>
 </body>
 </html>
