@@ -6,8 +6,9 @@
   <title>표만들기</title>
   <style>
     #container{
-      width: 600px;
+      width: 60%;
       margin: 0 auto;
+      text-align: center;
     }
     form {
       margin-bottom:30px;
@@ -42,7 +43,26 @@
   </div>
 
   <script>
-   
+    let rCountEle = document.querySelector("#rCount");
+    let cCountEle = document.querySelector("#cCount");
+    let btnEle = document.querySelector("#btn");
+
+    btn.onclick = show;
+    function show() {
+      rCountEle = rCountEle.value;
+      cCountEle = cCountEle.value;
+
+      let elementList = `<table>`
+      for(let i = 1; i <= rCountEle; i++) {
+        elementList += `<tr>`
+        for(let j = 1; j <= cCountEle; j++) {
+          elementList += `<td>${i}, ${j}</td>`
+        }
+        elementList += `</tr>`
+      }
+      elementList += `</table>`
+      document.querySelector("#contents").innerHTML = elementList;
+    }
   </script>
 </body>
 </html>

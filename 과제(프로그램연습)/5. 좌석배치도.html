@@ -6,12 +6,12 @@
     <title>좌석배치도</title>
     <style>
         table{
-            width: 500px;
+            width: 60%;
             border: 1px solid #ccc;
             border-collapse: collapse;
             empty-cells: hide;
             margin-top: 30px;
-
+            text-align: center;
         }
         td{
             border: 1px solid #ccc;
@@ -52,7 +52,7 @@
                 for(let j = 1; j <= colNumEle; j++) {
                     if(seatNo >= personEle.value) break;
                     seatNo ++;
-                    elementList += `<td>사람${seatNo}</td>`;
+                    elementList += `<td>좌석 : ${seatNo}</td>`;
                 }
                 elementList += `</tr>`;   
             }
