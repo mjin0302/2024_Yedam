@@ -9,7 +9,6 @@
       border: 1px solid #ccc;
       padding-top: 30px;
       margin: 0 auto;
-      
     }
     #day1{
       text-align: center;
@@ -75,8 +74,38 @@
       </ul>
   </div>
     <script>
+      accentDay();
       let today = new Date();
-      console.log(today);
+      // let year = today.getFullYear();
+      // let month = today.getMonth() + 1; // 0부터 시작함(0 -> 1월.....)
+      // let date = today.getDate();
+      let realToday = "";
+
+      let accent = document.querySelector("#accent");
+
+      let day100 = accentDay(new Date(today + 100));
+
+      function accentDay(day) {
+  let year = day.getFullYear();
+  let month = day.getMonth() + 1; // 0부터 시작함(0 -> 1월.....)
+  let date = day.getDate();
+  let realToday = `${year}년 ${month}월 ${date}일`;
+  let day100 = accent(acceontDay(today + 100))
+
+  console.log("in function:", realToday); // return 전에 위치
+  return realToday;
+};
+  
+
+      function accentDay(day) {
+        let year = day.getFullYear();
+        let month = day.getMonth() + 1; // 0부터 시작함(0 -> 1월.....)
+        let date = day.getDate();
+        realToday = `${year}년 ${month}월 ${date}일`;
+        return realToday;
+        console.log("in function :",realToday);
+      };
+      accent.innerText = realToday;
     </script>
   </div>
 </body>

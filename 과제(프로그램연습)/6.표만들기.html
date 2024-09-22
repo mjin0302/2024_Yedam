@@ -22,7 +22,7 @@
       margin-left:10px;
     }
     table {
-      width:500px;      
+      width:100%;      
       border-collapse: collapse;
     }
     td {
@@ -47,15 +47,20 @@
     let cCountEle = document.querySelector("#cCount");
     let btnEle = document.querySelector("#btn");
 
-    btn.onclick = show;
+    btnEle.onclick = show;
+
     function show() {
-      rCountEle = rCountEle.value;
-      cCountEle = cCountEle.value;
+      let rCountVal = rCountEle.value;
+      let cCountVal = cCountEle.value;
+      console.log("rCountVal", rCountVal);
+      console.log("cCountVal", cCountVal);
 
       let elementList = `<table>`
-      for(let i = 1; i <= rCountEle; i++) {
+      for(let i = 1; i <= rCountVal; i++) {
+        console.log("rCountEle in for", rCountVal);
+        console.log("cCountEle in for", cCountVal);
         elementList += `<tr>`
-        for(let j = 1; j <= cCountEle; j++) {
+        for(let j = 1; j <= cCountVal; j++) {
           elementList += `<td>${i}, ${j}</td>`
         }
         elementList += `</tr>`
