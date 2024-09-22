@@ -74,38 +74,34 @@
       </ul>
   </div>
     <script>
-      accentDay();
+      let accent = document.querySelector("#accent");
+      let date100Ele = document.querySelector("#date100");
+      let date200Ele = document.querySelector("#date200");
+      let date365Ele = document.querySelector("#date365");
+      let date500Ele = document.querySelector("#date500");
+      
       let today = new Date();
-      // let year = today.getFullYear();
-      // let month = today.getMonth() + 1; // 0부터 시작함(0 -> 1월.....)
-      // let date = today.getDate();
       let realToday = "";
 
-      let accent = document.querySelector("#accent");
-
-      let day100 = accentDay(new Date(today + 100));
-
-      function accentDay(day) {
-  let year = day.getFullYear();
-  let month = day.getMonth() + 1; // 0부터 시작함(0 -> 1월.....)
-  let date = day.getDate();
-  let realToday = `${year}년 ${month}월 ${date}일`;
-  let day100 = accent(acceontDay(today + 100))
-
-  console.log("in function:", realToday); // return 전에 위치
-  return realToday;
-};
-  
+      let day100 = accentDay(new Date(today.getTime() + 100 * 24 * 60 * 60 * 1000));
+      let day200 = accentDay(new Date(today.getTime() + 200 * 24 * 60 * 60 * 1000));
+      let day365 = accentDay(new Date(today.getTime() + 365 * 24 * 60 * 60 * 1000));
+      let day500 = accentDay(new Date(today.getTime() + 500 * 24 * 60 * 60 * 1000));
 
       function accentDay(day) {
         let year = day.getFullYear();
         let month = day.getMonth() + 1; // 0부터 시작함(0 -> 1월.....)
         let date = day.getDate();
-        realToday = `${year}년 ${month}월 ${date}일`;
+        let realToday = `${year}년 ${month}월 ${date}일`;
+
         return realToday;
-        console.log("in function :",realToday);
       };
-      accent.innerText = realToday;
+      accent.innerText = accentDay(today);
+      date100Ele.innerText = day100;
+      date200Ele.innerText = day200;
+      date365Ele.innerText = day365;
+      date500Ele.innerText = day500;
+
     </script>
   </div>
 </body>
