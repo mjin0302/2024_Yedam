@@ -40,17 +40,30 @@
         btnEle.onclick = show;
 
         function show() {
-            
             let numArr = [];
             
-            for(let i = 0; i < 6; i++) {
-                let num = Math.floor(Math.random() * 45) + 1;
+            // for(let i = 0; i < 6; i++) {
+            //     let num = Math.floor(Math.random() * 45) + 1;
 
+            //     if(numArr.indexOf(num) == -1) {
+            //         numArr.push(num);
+            //     } else {
+            //         i--;
+            //     } 
+            // }
+            // while (numArr.length < 6) {
+            //     let num = Math.floor(Math.random() * 45) + 1;
+            //     if(numArr.indexOf(num) == -1) {
+            //         numArr.push(num);
+            //     } 
+            // }
+            let count = 0;
+            while(count < 6) {
+                let num = Math.floor(Math.random() * 45) + 1;
                 if(numArr.indexOf(num) == -1) {
-                    numArr.push(num);
-                } else {
-                    i--;
-                } 
+                    numArr[count] = num;
+                    count++;
+                }
             }
             lottoDiv.innerHTML = numArr.join("&nbsp&nbsp&nbsp");
         }

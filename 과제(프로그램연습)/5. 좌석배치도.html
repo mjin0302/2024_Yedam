@@ -43,13 +43,13 @@
 
         function show() {
             let seatNo = 0;
-            rowNumEle = Number(Math.ceil(personEle.value / colNumEle.value));
-            colNumEle = Number(colNumEle.value);
+            let rowNum = Number(Math.ceil(personEle.value / colNumEle.value));
+            let colNum = Number(colNumEle.value);
 
             let elementList = `<table>`
-            for(let i = 1; i <= rowNumEle; i++) {
+            for(let i = 1; i <= rowNum; i++) {
                 elementList += `<tr>`;
-                for(let j = 1; j <= colNumEle; j++) {
+                for(let j = 1; j <= colNum; j++) {
                     if(seatNo >= personEle.value) break;
                     seatNo ++;
                     elementList += `<td>좌석 : ${seatNo}</td>`;

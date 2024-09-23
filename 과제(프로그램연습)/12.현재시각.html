@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      #container {
+         width: 50%;
+         margin: 0 auto;
+         text-align: center;
+      }
+      
+   </style>
+</head>
+<body>
+   <div id="container">
+      <p>현재 시각 : ⏱
+         <span id="current" class="display"></span>
+      </p>
+      <button type="button" onclick="window.close()">닫기</button>
+   </div>
+   <script>
+      setInterval(() => {
+            let now = new Date();
+            let currentTime = now.toLocaleTimeString();
+            document.querySelector("#current").innerHTML = currentTime;
+      }, 1000);
+   </script>
+</body>
+</html>

@@ -81,8 +81,9 @@
       let date500Ele = document.querySelector("#date500");
       
       let today = new Date();
-      let realToday = "";
-
+      let anniDay = "";
+      // ! 
+      // 날짜 계산
       let day100 = accentDay(new Date(today.getTime() + 100 * 24 * 60 * 60 * 1000));
       let day200 = accentDay(new Date(today.getTime() + 200 * 24 * 60 * 60 * 1000));
       let day365 = accentDay(new Date(today.getTime() + 365 * 24 * 60 * 60 * 1000));
@@ -90,12 +91,17 @@
 
       function accentDay(day) {
         let year = day.getFullYear();
-        let month = day.getMonth() + 1; // 0부터 시작함(0 -> 1월.....)
+        let month = day.getMonth() + 1; 
+        if(month < 10) month = '0' + month;
+        // month = (month < 10) ? "0" + month : month;
         let date = day.getDate();
-        let realToday = `${year}년 ${month}월 ${date}일`;
+        if(date.length < 2) date = '0' + date;
+        
+        let anniDay = `${year}년 ${month}월 ${date}일`;
 
-        return realToday;
+        return anniDay;
       };
+
       accent.innerText = accentDay(today);
       date100Ele.innerText = day100;
       date200Ele.innerText = day200;

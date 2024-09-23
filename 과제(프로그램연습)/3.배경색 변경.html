@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>배경색 변경</title>
     <style>
+        .dark {
+            background-color: black;
+            color: white;
+            border-color: #ccc;
+        }
         #container{
             width: 500px;
             margin: 0 auto;
@@ -20,7 +25,7 @@
             height: 200px;
             border: 1px solid #ccc;
             margin: 10px 0;
-        }
+        } 
     </style>
 </head>
 <body>
@@ -29,14 +34,35 @@
             <li onclick="change('green')">green</li>
             <li onclick="change('orange')">orange</li>
             <li onclick="change('purple')">purple</li>
+            
+            <li class="chColor">green</li>
+            <li class="chColor">orange</li>
+            <li class="chColor">purple</li>
         </ul>
         <div id="result"></div>
+        <button type="button" id="bgBtn">배경색</button>
         
     </div>
 
     <script>
+        
         let divEle = document.querySelector("#result");
+        // ! 배경색 변경
+        let bgBtnEle = document.querySelector("#bgBtn");
+        bgBtnEle.onclick = function background() {
+            // toggle = 하나의 버튼으로 두가지 기능을 할 수 있음
+            document.body.classList.toggle('dark')
+        }
 
+        // 색변경(인라인 이벤트)
+        let liEle = document.querySelectorAll(".chColor");
+        liEle.forEach((color) => {
+            color.onclick = (event) => {
+                let ele = event.target;
+                divEle.style.backgroundColor = ele.innerText;
+            }
+            
+        })
         function change(color) {
             console.log(color);
             if(color === "green") {
@@ -55,6 +81,7 @@
                 divEle.style.backgroundPosition = "center";
                 divEle.style.backgroundRepeat = "no-repeat";
             }
+
         }
     </script>
 </body>
