@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> 계산기</title>
+</head>
+<body>
+   <h1>계산기</h1>
+   <input type="text" id="num1">
+   <input type="text" id="num2">
+   <button type="button" id="btnCalc">계산</button>
+   <div id="result" style="border:1px solid blue; height:50px"></div>
+
+   <script>
+      // 계산 버튼 클릭 이벤트
+      let num1 = document.querySelector("#num1");
+      let num2 = document.querySelector("#num2");
+      let result = document.querySelector("#result");
+      
+      const calc = () => {
+         let sum = parseInt(num1.value) + parseInt(num2.value);
+
+         result.innerHTML = sum;
+      }
+      btnCalc.addEventListener("click", calc);
+      
+   </script>
+</body>
+</html>

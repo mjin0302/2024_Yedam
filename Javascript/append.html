@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <input id="fruit">
+   <button id="btn">추가</button>
+   <select id="list"></select>
+
+   <script>
+      //input 태그의 입력값을 가지고 option태그를 만들어서 추가
+      // button 태그의 id값이 유일한 값일 때는 document.querySelector()을 사용하지 않고 btn을 바로 사용해도 된다
+      btn.addEventListener("click", function(){
+         let option = document.createElement("option");
+         let fruitVal = document.querySelector("#fruit").value;
+
+         option.innerText = fruitVal;
+         
+         document.querySelector("#list").insertAdjacentElement("afterbegin", option);
+         fruit.value = "";
+         
+      })
+      fruit.addEventListener("keypress", function(){
+         console.log(window.event.keyCode)
+         if(window.event.keyCode == 13) {
+            btn.click();
+         }
+      })
+
+      window.addEventListener("keydown", function(){
+         console.log(window.event.keyCode)
+      })
+   </script>
+</body>
+</html>

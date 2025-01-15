@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>classTest.html</title>
+   <style>
+      .active {
+         color : red;
+         font-size: 2em;
+      }
+      .highlight {
+         background-color: cyan;
+      }
+   </style>
+</head>
+<body>
+   <div class="active">사과</div>
+   <div>바나나</div>
+   <div>키위</div>
+
+   <button type="button" id="btnSelect">선택한 과일은?</button>
+   <div id="result"></div>
+   <script>
+      //div
+      let divs = document.getElementsByTagName("div");
+      //const handler = ()=>{  event.target.classList.toggle("active");   }
+      // for( let obj  of  divs)   {
+      //     obj.addEventListener("click", handler);
+      // } 
+      // for(let i=0; i < divs.length; i++){
+      //    divs[i].addEventListener("click", ()=>{
+      //       event.target.classList.toggle("active");
+      //    });
+      // }
+
+      document.body.addEventListener("click", ()=>{
+         if(event.target.tagName == "DIV") {
+            event.target.classList.toggle("active");
+         }
+      });
+
+      const findActive = () => {
+         //event.stopPropagation();
+         document.querySelectorAll(".active").forEach(ele => {
+            console.log("forEach => ", ele.innerText)
+         });
+
+         Array.from(document.querySelectorAll(".active")).map(ele => console.log("map => ", ele.innerText));
+      }
+
+      btnSelect.addEventListener("click", findActive);
+
+   </script>
+</body>
+</html>
