@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classTest.html</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .active {
+            color : red;
+            font-size: 2em;
+        }
+        .highlight {
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <input id="fruit">
+    <div id="box">
+      <div class="active">사과</div>
+      <div>바나나</div>
+      <div>키위</div>
+    </div>
+    <button id="btnSelect">선택한 과일은?</button>
+    <button id="btnCancle">삭제</button>
+    <script>
+      document.querySelector("#fruit").addEventListener("keypress", () => {
+        if(event.keyCode == 13) {
+          const tag = "<div>" + event.target.value + "</div>";
+          document.querySelector("#box").insertAdjacentHTML("beforeend", tag)
+        }
+      });
+
+      // 그룹이벤트 on만 가능함
+      $("#box").on("click", "div", () => {
+        $(event.target).addClass("active");
+      });
+
+      // 그룹이벤트
+      // document.querySelector("#box").addEventListener("click", ()=>{
+      //   if( event.target.tagName  == "DIV" ){
+      //     event.target.classList.toggle("active");
+      //   }
+      // });
+
+      $("#btnSelect").on("click", () => {
+        console.log($(".active").text());
+      });
+
+      $("#btnCancle").on("click", () => {
+        $(".active").removeClass("active");
+      })
+
+      // btnSelect.addEventListener("click", function(){
+      //   //event.stopPropagation();
+      //   //class="active" 인 태그들 찾고
+      //   var fruits = document.getElementsByClassName("active");
+        
+      //   //반복문
+      //   for(i=0; i<fruits.length; i++) {
+      //     //선택된 태그들의 내용을 콘솔창에 출력
+      //     console.log(fruits[i].innerHTML);
+      //   }
+      // });
+
+    </script>
+</body>
+</html>
