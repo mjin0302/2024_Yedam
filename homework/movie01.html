@@ -4,52 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>영화정보</title>
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
   <style>
     .movieCd { cursor: pointer; text-decoration: underline;}
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="alert alert-primary"><h3 class="text-center">일별 박스오피스</h3></div>
-    <div class="row gx-5">
-      <div class="col-md-6">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr><td>랭킹</td><td>영화코드</td><td>영화명</td><td>개봉일자</td></tr>
-          </thead>
-          <tbody id="list"></tbody>
-        </table>
+    <div class="container-fluid mx-auto">
+      <div class="alert alert-primary">
+        <h3 class="text-center">일별 박스오피스</h3>
       </div>
-      <div class="col-md-6">
-        <div class="row mb-4">
-          <label class="col-md-3 col-form-label">영화코드</label>
-          <div class="col-md-9">
-            <input class="form-control" id="txtMovieCd">
-          </div>
+      
+      <div class="row gx-5">
+        <div class="col-md-6">
+  
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>랭킹</th>
+                <th>영화코드</th>
+                <th>영화명</th>
+                <th>개봉일자</th>
+              </tr>
+            </thead>
+
+            <tbody id="list"></tbody>
+          </table>
+        
         </div>
-        <div class="row mb-4">
-          <label class="col-md-3 col-form-label">영화명</label>
-          <div class="col-md-9">
-            <input class="form-control" id="movieNm">
+        
+        <div id="movieInfoBox" class="col-md-6">
+          <div class="row mb-4">
+            <label class="col-md-3 col-form-label">영화코드</label>
+            <div class="col-md-9">
+              <input class="form-control" id="txtMovieCd">
+            </div>
           </div>
-        </div>
-        <div class="row mb-4">
-          <label class="col-md-3 col-form-label">개봉일자</label>
-          <div class="col-md-9">
-            <input class="form-control" id="openDt">
+          <div class="row mb-4">
+            <label class="col-md-3 col-form-label">영화명</label>
+            <div class="col-md-9">
+              <input class="form-control" id="movieNm">
+            </div>
           </div>
-        </div>
-        <div class="row mb-4">
-          <label class="col-md-3 col-form-label">감독</label>
-          <div class="col-md-9">
-            <input class="form-control" id="directors">
+          <div class="row mb-4">
+            <label class="col-md-3 col-form-label">개봉일자</label>
+            <div class="col-md-9">
+              <input class="form-control" id="openDt">
+            </div>
           </div>
-        </div>
-        <div class="row mb-4">
-          <label class="col-md-3 col-form-label">출연배우</label>
-          <div class="col-md-9">
-            <textarea class="form-control" style="height: 130px;" id="actors"></textarea>
+          <div class="row mb-4">
+            <label class="col-md-3 col-form-label">감독</label>
+            <div class="col-md-9">
+              <input class="form-control" id="directors">
+            </div>
+          </div>
+          <div class="row mb-4">
+            <label class="col-md-3 col-form-label">출연배우</label>
+            <div class="col-md-9">
+              <textarea class="form-control" style="height: 130px;" id="actors"></textarea>
+            </div>
           </div>
         </div>
       </div>
@@ -57,8 +74,44 @@
   </div>
 
   <script src="movieInfo.js"></script>
-  <script>
 
+  <script>
+    let movieArr = movieRank;
+
+    $(movieArr).each((idx, data) => {
+      let trEle = $("<tr>");
+
+      let rank = $("<td>").text(data.rank);
+      trEle.append(rank);
+      
+      let movieCd = $('<td id="' + data.movieCd + '" class="movieCd">').text(data.movieCd);
+      trEle.append(movieCd);
+
+      let movieNm = $("<td>").text(data.movieNm);
+      trEle.append(movieNm);
+
+      let openDt = $("<td>").text(data.openDt);
+      trEle.append(openDt)  
+
+      $("#list").append(trEle);
+    });
+
+    $().ready(() => {
+      $("#list").on("click", (e) => {
+        if($(event.target).attr("class") == "movieCd") {
+          const movieCd = $(event.target).attr("id");
+          const movieDetails = movieInfo[movieCd];
+          let directors = movieDetails.directors.map(data => data.peopleNm);
+          let actors = movieDetails.actors.map(data => data.peopleNm);
+
+          $("#txtMovieCd").val(movieDetails.movieCd);  //영화코드
+          $("#movieNm").val(movieDetails.movieNm);     // 영화명
+          $("#openDt").val(movieDetails.openDt);       // 개봉일자 
+          $("#directors").val(directors.join(", ")); // 감독
+          $("#actors").val(actors.join(", "));       // 출연배우
+        }
+      });
+    });
   </script>
 </body>
 </html>
