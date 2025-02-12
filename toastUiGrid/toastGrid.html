@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- timePicker -->
+   <link rel="stylesheet" href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.css" />
+   <script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.js"></script>
+
+   <!-- datePicker -->
+   <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
+   <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+
+   <!-- paging -->
+   <link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.css" />
+   <script src="https://uicdn.toast.com/tui.pagination/latest/tui-pagination.js"></script>
+
+   <!-- toast grid -->
+   <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css" />
+   <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+
+   <!-- 엑셀 -->
+   <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+
+   <style>
+   .red {
+      background-color: brown;
+   }
+   </style>
+   <title>Document</title>
+</head>
+<body>
+   <input type="time">
+   <button type="button" id="btnAdd">행추가</button>
+   <button type="button" id="btnDelete">행삭제</button>
+   <button type="button" id="btnSave">저장</button>
+   <button type="button" id="btnExcel">엑셀</button>
+
+   <div id="grid"></div>
+   <div id="pagination" class="tui-pagination"></div>
+
+   <script src="dummy.js"></script>
+   <script>
+      var Grid = tui.Grid;
+
+      const grid = new Grid({
+         el : document.getElementById('grid'), // 컨테이너 엘리먼트
+         
+         pageOptions : {
+            useClient : true, // true -> 화면에 다 불러와서 페이징 false -> 서버 사이드
+            perPage : 5,
+         },
+
+         columns: [ 
+            { header : "Name", name : "name", },
+            { header : "Artist", name : "artist", editor : "text" },
+         ],
+         data:gridData
+      });
+
+   </script>
+</body>
+</html>
